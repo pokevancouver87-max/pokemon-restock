@@ -161,6 +161,15 @@ async function refreshMsrp(phaseNum, totalPhases) {
 // ── Phase 2: Parallel retailer scraping ───────────────────────────────────────
 
 async function scrapeRetailers(phaseNum, totalPhases) {
+  
+import { scrapeWalmartCA } from './scrapers/walmart-ca.js'
+import { scrapeLondonDrugs } from './scrapers/londondrugs.js'
+import { scrapeCanadianTire } from './scrapers/canadiantire.js'
+
+// inside Promise.all
+... scrapeWalmartCA(keywords),
+... scrapeLondonDrugs(keywords),
+... scrapeCanadianTire(keywords),
   const enabled = SCRAPERS.filter(s => s.cfg().enabled);
   const disabled = SCRAPERS.filter(s => !s.cfg().enabled);
 
