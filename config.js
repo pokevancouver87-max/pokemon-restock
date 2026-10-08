@@ -43,19 +43,12 @@ module.exports = {
       color: 0xcc0000,
       keywords,
     },
-    walmart: {
-      enabled: process.env.WALMART_ENABLED !== 'false',
-      name: 'Walmart',
-      color: 0x0071ce,
-      keywords,
-    },
-    bestbuy: {
-      enabled: process.env.BESTBUY_ENABLED !== 'false',
-      name: 'Best Buy',
-      color: 0xffe000,
-      apiKey: process.env.BESTBUY_API_KEY || '',
-      keywords,
-    },
+walmartca: { enabled: process.env.WALMARTCA_ENABLED!== 'false', label: 'Walmart CA' },
+londondrugs: { enabled: process.env.LONDONDRUGS_ENABLED!== 'false', label: 'London Drugs' },
+canadiantire: { enabled: process.env.CANADIANTIRE_ENABLED!== 'false', label: 'Canadian Tire' },
+bestbuyca: { enabled: process.env.BESTBUYCA_ENABLED!== 'false', label: 'Best Buy CA' },
+toysrusca: { enabled: process.env.TOYSRUSCA_ENABLED!== 'false', label: 'Toys R Us CA' },
+    
     amazon: {
       enabled:    process.env.AMAZON_ENABLED !== 'false',
       name:       'Amazon',
